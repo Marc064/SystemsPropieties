@@ -535,6 +535,8 @@ public class GUI extends JFrame implements ActionListener {
 			if (option1.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "a") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				 
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "a");
@@ -544,6 +546,8 @@ public class GUI extends JFrame implements ActionListener {
 			if (option2.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "b") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "b");
 				cont++;
@@ -552,6 +556,8 @@ public class GUI extends JFrame implements ActionListener {
 			if (option3.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "c") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "c");
 				cont++;
@@ -561,6 +567,8 @@ public class GUI extends JFrame implements ActionListener {
 				
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "d") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "d");
 				cont++;
@@ -575,6 +583,8 @@ public class GUI extends JFrame implements ActionListener {
 			if (optionTr.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "v") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "v");
 				cont++;
@@ -583,6 +593,8 @@ public class GUI extends JFrame implements ActionListener {
 			if (optionFs.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "f") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "f");
 				cont++;

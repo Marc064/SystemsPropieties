@@ -9,7 +9,7 @@ public class Run {
 	public static void main(String[] args) {
 		GUI run = new GUI();	
 		run.setVisible(true);
-		new Menu().Console();
+	//	new Menu().Console();
 		
 		
 		
