@@ -6,6 +6,7 @@ import java.net.URL;
 import javax.swing.*;
 
 import co.edu.uptc.logic.control.Game;
+import co.edu.uptc.logic.control.Music;
 /**
  * @author Marco Antonio Vargas Garcia & Miguel Angel Alfonso Saavedra
  * @version 1.0
@@ -56,6 +57,7 @@ public class GUI extends JFrame implements ActionListener {
 	private byte cont;
 	private int points;
 	private String difficult;
+	Music mu= new Music("src/Resource/Music/Night-and-Day-Loop-1.wav");
 	
 	public GUI() {
 		con = getContentPane();
@@ -66,6 +68,7 @@ public class GUI extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		con.add(Home());
 		start = new Game();
+		mu.loop();
 	}
 
 	private JPanel Home() {
@@ -490,6 +493,7 @@ public class GUI extends JFrame implements ActionListener {
 		Object fuente = e.getSource();
 
 		if (fuente == exit) {
+			mu.stop(); 
 			System.exit(ABORT);
 		}
 
