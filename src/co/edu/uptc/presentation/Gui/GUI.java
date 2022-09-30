@@ -2,6 +2,8 @@ package co.edu.uptc.presentation.Gui;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import javax.swing.*;
 
@@ -26,6 +28,7 @@ public class GUI extends JFrame implements ActionListener {
 	private ImageIcon hardButton = new ImageIcon("src/Resource/Buttons/hard_Button.png");
 	private ImageIcon nextButton = new ImageIcon("src/Resource/Buttons/next_Button.png");
 	private ImageIcon homeButton = new ImageIcon("src/Resource/Buttons/home_Button.png");
+	private ImageIcon infoButton = new ImageIcon("src/Resource/Buttons/info_Button.png");
 	private ImageIcon logo = new ImageIcon("src/Resource/Desktop/logo.png");
 	private Image fondo;
 	private URL fon;
@@ -39,6 +42,7 @@ public class GUI extends JFrame implements ActionListener {
 	private JButton next;
 	private JButton nextTF;
 	private JButton desk;
+	private JButton info;
 	private JTextArea rankEasy;
 	private JTextArea rankHard;
 	private JTextArea rankMid;
@@ -69,6 +73,7 @@ public class GUI extends JFrame implements ActionListener {
 		con.add(Home());
 		start = new Game();
 		mu.loop();
+		System.out.println(mu.infoSong());
 	}
 
 	private JPanel Home() {
@@ -117,11 +122,23 @@ public class GUI extends JFrame implements ActionListener {
 		exit.setHorizontalTextPosition(SwingConstants.CENTER);
 		exit.setBorderPainted(false);
 		exit.addActionListener(this);
+		
+		info = new JButton("Repasemos");
+		info.setFont(italic);
+		info.setBounds(1160, 30, 200, 100);
+		Icon in = new ImageIcon(
+				infoButton.getImage().getScaledInstance(info.getWidth(), info.getHeight(), Image.SCALE_DEFAULT));
+		info.setIcon(in);
+		info.setContentAreaFilled(false);
+		info.setHorizontalTextPosition(SwingConstants.CENTER);
+		info.setBorderPainted(false);
+		info.addActionListener(this);
 
 		principal.setLayout(null);
 		principal.add(play);
 		principal.add(ranked);
 		principal.add(exit);
+		principal.add(info);
 
 		return principal;
 	}
@@ -261,7 +278,7 @@ public class GUI extends JFrame implements ActionListener {
 		exit.setBorderPainted(false);
 		exit.addActionListener(this);
 
-		easy = new JButton("Facil");
+		easy = new JButton("Fácil");
 		easy.setFont(italic_Dif);
 		easy.setBounds(490, 360, 200, 180);
 		Icon es = new ImageIcon(
@@ -283,7 +300,7 @@ public class GUI extends JFrame implements ActionListener {
 		mid.setBorderPainted(false);
 		mid.addActionListener(this);
 
-		hard = new JButton("Dificil");
+		hard = new JButton("Difícil");
 		hard.setFont(italic_Dif);
 		hard.setBounds(1100, 360, 200, 180);
 		hard.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -612,6 +629,15 @@ public class GUI extends JFrame implements ActionListener {
 			con.removeAll();
 			con.add(Home());
 			setVisible(true);
+		}
+		
+		if (fuente == info) {
+			try {
+			     File path = new File ("src/Resource/Documents/info.pdf");
+			     Desktop.getDesktop().open(path);
+			}catch (IOException ex) {
+			     ex.printStackTrace();
+			}
 		}
 	}
 	

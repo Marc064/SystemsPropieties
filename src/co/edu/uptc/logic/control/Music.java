@@ -18,8 +18,6 @@ public class Music {
 			e.printStackTrace();
 		}
 		
-		AudioFormat format  = audioStream.getFormat();
-		var info = new DataLine.Info(Clip.class, format);
 		
 		try {
 			audioClip = AudioSystem.getClip();
@@ -46,6 +44,12 @@ public class Music {
 	
 	public void stop() {
 		audioClip.stop();
+	}
+	
+	public String infoSong() {
+		AudioFormat format  = audioStream.getFormat();
+		var info = new DataLine.Info(Clip.class, format);
+		return String.valueOf(info);
 	}
 
 }
