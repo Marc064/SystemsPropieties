@@ -61,7 +61,10 @@ public class GUI extends JFrame implements ActionListener {
 	private byte cont;
 	private int points;
 	private String difficult;
-	Music mu= new Music("src/Resource/Music/Night-and-Day-Loop-1.wav");
+	private Music principalSong= new Music("src/Resource/Music/Different-Loop-1.wav");
+	private Music easySong= new Music("src/Resource/Music/Night-and-Day-Loop-1.wav");
+	private Music midSong= new Music("src/Resource/Music/Icon-Loop-3.wav");
+	private Music hardSong= new Music("src/Resource/Music/Broken-Silence-Loop-1.wav");
 	
 	public GUI() {
 		con = getContentPane();
@@ -72,8 +75,8 @@ public class GUI extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		con.add(Home());
 		start = new Game();
-		mu.loop();
-		System.out.println(mu.infoSong());
+		principalSong.loop();
+		System.out.println(principalSong.infoSong());
 	}
 
 	private JPanel Home() {
@@ -510,7 +513,7 @@ public class GUI extends JFrame implements ActionListener {
 		Object fuente = e.getSource();
 
 		if (fuente == exit) {
-			mu.stop(); 
+			principalSong.stop(); 
 			System.exit(ABORT);
 		}
 
@@ -532,6 +535,9 @@ public class GUI extends JFrame implements ActionListener {
 			difficult = "easy";
 			start.GenerateQuestionsGame(difficult);
 			con.removeAll();
+			principalSong.stop();
+			easySong.loop();
+			System.out.println(easySong.infoSong());
 			changeQuestion();
 		}
 
@@ -540,6 +546,9 @@ public class GUI extends JFrame implements ActionListener {
 			difficult = "medium";
 			start.GenerateQuestionsGame(difficult);
 			con.removeAll();
+			principalSong.stop();
+			midSong.loop();
+			System.out.println(midSong.infoSong());
 			changeQuestion();
 		}
 
@@ -548,6 +557,9 @@ public class GUI extends JFrame implements ActionListener {
 			difficult = "hard";
 			start.GenerateQuestionsGame(difficult);
 			con.removeAll();
+			principalSong.stop();
+			hardSong.loop();
+			System.out.println(hardSong.infoSong());
 			changeQuestion();
 		}
 
@@ -707,6 +719,10 @@ public class GUI extends JFrame implements ActionListener {
 				setVisible(true);
 			}
 		}else {
+			easySong.stop();
+			midSong.stop();
+			hardSong.stop();
+			principalSong.loop();
 			con.removeAll();
 			con.add(GameOver());
 			name();

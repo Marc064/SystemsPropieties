@@ -101,8 +101,8 @@ public void ScoreRegistration(String name, int score, String difficult) {
 					tipQuestion = (int) (Math.random() * (2) + 1);
 				} else if (tipQuestion == 2 && cont5 == (cantQuestion / 3)) {
 					tipQuestion = (int) (Math.random() * (2) + 1);
-				} else if (tipQuestion == 3 && cont6 == (cantQuestion / 3)) {
-					tipQuestion = (int) (Math.random() * (2) + 1);
+//				} else if (tipQuestion == 3 && cont6 == (cantQuestion / 3)) {
+//					tipQuestion = (int) (Math.random() * (2) + 1);
 				} else {
 					aux++;
 				}
