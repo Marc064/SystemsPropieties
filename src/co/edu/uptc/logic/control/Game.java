@@ -1,5 +1,8 @@
 package co.edu.uptc.logic.control;
-
+/**
+ * @author Marco Antonio Vargas Garcia & Miguel Angel Alfonso Saavedra
+ * @version 1.0
+ */
 import java.util.ArrayList;
 
 import co.edu.uptc.logic.model.Player;

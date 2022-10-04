@@ -1,5 +1,7 @@
 package co.edu.uptc.logic.control;
-
+/**
+ * @version 1.0
+ */
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;

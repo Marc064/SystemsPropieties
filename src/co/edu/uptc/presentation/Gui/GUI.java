@@ -281,7 +281,7 @@ public class GUI extends JFrame implements ActionListener {
 		exit.setBorderPainted(false);
 		exit.addActionListener(this);
 
-		easy = new JButton("Fácil");
+		easy = new JButton("Bajo");
 		easy.setFont(italic_Dif);
 		easy.setBounds(490, 360, 200, 180);
 		Icon es = new ImageIcon(
@@ -303,9 +303,9 @@ public class GUI extends JFrame implements ActionListener {
 		mid.setBorderPainted(false);
 		mid.addActionListener(this);
 
-		hard = new JButton("Difícil");
+		hard = new JButton("Superior");
 		hard.setFont(italic_Dif);
-		hard.setBounds(1100, 360, 200, 180);
+		hard.setBounds(1100, 360, 180, 200);
 		hard.setHorizontalTextPosition(SwingConstants.CENTER);
 		Icon ha = new ImageIcon(
 				hardButton.getImage().getScaledInstance(hard.getWidth(), hard.getHeight(), Image.SCALE_DEFAULT));
