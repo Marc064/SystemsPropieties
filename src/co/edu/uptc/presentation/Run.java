@@ -13,9 +13,9 @@ public class Run {
 		GUI run = new GUI();	
 		run.setVisible(true);
 
-	//	new Menu().Console();
-
-		//new Menu().Console();
+//		new Menu().Console();
+//
+//		new Menu().Console();
 
 		
 		

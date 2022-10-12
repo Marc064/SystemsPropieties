@@ -18,7 +18,8 @@ public class GUI extends JFrame implements ActionListener {
 	private static final long serialVersionUID = -7631358823389667283L;
 	private Font italic = new Font("Comic Sans MS Italic", Font.ITALIC, 30);
 	private Font italic_Dif = new Font("Comic Sans MS Italic", Font.ITALIC, 25);
-	private Font italic_ques = new Font("Comic Sans MS Italic", Font.ITALIC, 50);
+	private Font italic_ques = new Font("Comic Sans MS Italic", Font.ITALIC, 35);
+	private Font italic_rank = new Font("Comic Sans MS Italic", Font.ITALIC, 50);
 	private Font italic_over = new Font("Comic Sans MS Italic", Font.ITALIC, 70);
 	private ImageIcon exitButton = new ImageIcon("src/Resource/Buttons/exit_Button.png");
 	private ImageIcon rankedButton = new ImageIcon("src/Resource/Buttons/ranked_Button.png");
@@ -198,7 +199,7 @@ public class GUI extends JFrame implements ActionListener {
 		rankEasy = new JTextArea("");
 		rankEasy.setBounds(460, 310, 230, 430);
 		rankEasy.setEditable(false);
-		rankEasy.setFont(italic_ques);
+		rankEasy.setFont(italic_rank);
 		rankEasy.setOpaque(false);
 		route(1, start);
 		rankEasy.setLineWrap(true);
@@ -207,7 +208,7 @@ public class GUI extends JFrame implements ActionListener {
 		rankMid = new JTextArea("");
 		rankMid.setBounds(760, 310, 230, 430);
 		rankMid.setEditable(false);
-		rankMid.setFont(italic_ques);
+		rankMid.setFont(italic_rank);
 		rankMid.setOpaque(false);
 		route(2, start);
 		rankMid.setLineWrap(true);
@@ -216,7 +217,7 @@ public class GUI extends JFrame implements ActionListener {
 		rankHard = new JTextArea("");
 		rankHard.setBounds(1063, 310, 230, 430);
 		rankHard.setEditable(false);
-		rankHard.setFont(italic_ques);
+		rankHard.setFont(italic_rank);
 		rankHard.setOpaque(false);
 		route(3, start);
 		rankHard.setLineWrap(true);
@@ -341,7 +342,7 @@ public class GUI extends JFrame implements ActionListener {
 		};
 
 		score = new JTextArea("Puntaje\n" + points);
-		score.setFont(italic_ques);
+		score.setFont(italic_rank);
 		score.setBounds(110, 250, 300, 200);
 		score.setOpaque(false);
 		score.setEditable(false);
@@ -421,7 +422,7 @@ public class GUI extends JFrame implements ActionListener {
 		};
 
 		score = new JTextArea("Puntaje\n" + points);
-		score.setFont(italic_ques);
+		score.setFont(italic_rank);
 		score.setBounds(110, 250, 300, 200);
 		score.setOpaque(false);
 		score.setEditable(false);
@@ -568,8 +569,6 @@ public class GUI extends JFrame implements ActionListener {
 			if (option1.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "a") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				 
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "a");
@@ -579,8 +578,6 @@ public class GUI extends JFrame implements ActionListener {
 			if (option2.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "b") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "b");
 				cont++;
@@ -589,8 +586,6 @@ public class GUI extends JFrame implements ActionListener {
 			if (option3.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "c") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "c");
 				cont++;
@@ -600,8 +595,6 @@ public class GUI extends JFrame implements ActionListener {
 				
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "d") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "d");
 				cont++;
@@ -616,8 +609,6 @@ public class GUI extends JFrame implements ActionListener {
 			if (optionTr.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "v") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "v");
 				cont++;
@@ -626,8 +617,6 @@ public class GUI extends JFrame implements ActionListener {
 			if (optionFs.isSelected()) {
 				if (start.validateAnswer(start.getListQuestionGame().get(cont-1), "f") == 0) {
 					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Incorrecto" , JOptionPane.ERROR_MESSAGE);
-				}else {
-					JOptionPane.showMessageDialog(null, start.getListQuestionGame().get(cont-1).getExplication(), "Correcto" , JOptionPane.INFORMATION_MESSAGE);
 				}
 				points = points + start.validateAnswer(start.getListQuestionGame().get(cont-1), "f");
 				cont++;

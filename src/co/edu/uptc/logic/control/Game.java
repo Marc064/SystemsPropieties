@@ -72,9 +72,9 @@ public void ScoreRegistration(String name, int score, String difficult) {
 		if (difficult.equalsIgnoreCase("easy") == true) {
 			cantQuestion = 15;
 		} else if (difficult.equalsIgnoreCase("medium") == true) {
-			cantQuestion = 30;
-		} else if (difficult.equalsIgnoreCase("hard") == true) {
 			cantQuestion = 45;
+		} else if (difficult.equalsIgnoreCase("hard") == true) {
+			cantQuestion = 77;
 		}
 
 		int cont1 = 0;
@@ -85,8 +85,8 @@ public void ScoreRegistration(String name, int score, String difficult) {
 
 			if (ListAllQuestions.get(i).getID() >= 100 && ListAllQuestions.get(i).getID() < 200) {
 				cont1++;
-			} else if (ListAllQuestions.get(i).getID() >= 200 && ListAllQuestions.get(i).getID() < 300) {
-				cont2++;
+//			} else if (ListAllQuestions.get(i).getID() >= 200 /*&& ListAllQuestions.get(i).getID() < 300*/) {
+//				cont2++;
 			} else if (ListAllQuestions.get(i).getID() >= 300) {
 				cont3++;
 			}

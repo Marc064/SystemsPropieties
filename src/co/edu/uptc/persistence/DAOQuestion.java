@@ -36,10 +36,9 @@ public class DAOQuestion {
 			answer_options.add(Line[4]);
 			answer_options.add(Line[5]);
 			answer_options.add(Line[6]);
-			answer_options.add(Line[7]);
 			q.setAnswer_options(answer_options);
-			q.setPoints(Integer.parseInt(Line[8].replace("<", "")));
-			q.setExplication(Line[9]);
+			q.setPoints(Integer.parseInt(Line[7].replace("<", "")));
+			q.setExplication(Line[8]);
 			
 			listQuestions.add(q);
 		}
@@ -86,7 +85,6 @@ public class DAOQuestion {
 					+ qmo.getAnswer_options().get(1) + "< "
 					+ qmo.getAnswer_options().get(2) + "< "
 					+ qmo.getAnswer_options().get(3) + "< "
-					+ qmo.getAnswer_options().get(4) + "< "
 					+ qmo.getPoints() + "< "
 					+ qmo.getExplication());
 		}
@@ -123,10 +121,9 @@ public class DAOQuestion {
 				answer_options.add(Line[4]);
 				answer_options.add(Line[5]);
 				answer_options.add(Line[6]);
-				answer_options.add(Line[7]);
 				qmo.setAnswer_options(answer_options);
-				qmo.setPoints(Integer.parseInt(Line[8].replace("<", "")));
-				qmo.setExplication(Line[9].replace(";", ""));
+				qmo.setPoints(Integer.parseInt(Line[7].replace("<", "")));
+				qmo.setExplication(Line[8].replace(";", ""));
 				return qmo;
 			}
 		}
@@ -194,10 +191,9 @@ public class DAOQuestion {
 				answer_options.add(Line[4]);
 				answer_options.add(Line[5]);
 				answer_options.add(Line[6]);
-				answer_options.add(Line[7]);
 				q.setAnswer_options(answer_options);
-				q.setPoints(Integer.parseInt(Line[8].replace("<", "")));
-				q.setExplication(Line[9]);
+				q.setPoints(Integer.parseInt(Line[7].replace("<", "")));
+				q.setExplication(Line[8]);
 				listQuestions.add(q);
 			}
 			else if(Integer.parseInt(Line[0])>=200 && Integer.parseInt(Line[0])<300) {
