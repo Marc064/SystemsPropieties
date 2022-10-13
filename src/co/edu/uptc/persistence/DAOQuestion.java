@@ -96,7 +96,7 @@ public class DAOQuestion {
 //					+ qo.getPoints() + "< "
 //					+ qo.getExplication());
 //		}
-		else if(type == 2) {
+		else if(type == 2 || type == 3) {
 			QuestionTOF qtof = searchQuestionTOF(Q);
 			new Archive().AddContents(route_four, qtof.getID() + "< "
 					+ qtof.getFormulation() + "< "

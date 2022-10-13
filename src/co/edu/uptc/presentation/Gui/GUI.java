@@ -17,7 +17,7 @@ public class GUI extends JFrame implements ActionListener {
 	
 	private static final long serialVersionUID = -7631358823389667283L;
 	private Font italic = new Font("Comic Sans MS Italic", Font.ITALIC, 30);
-	private Font italic_Dif = new Font("Comic Sans MS Italic", Font.ITALIC, 25);
+	private Font italic_Dif = new Font("Comic Sans MS Italic", Font.ITALIC, 20);
 	private Font italic_ques = new Font("Comic Sans MS Italic", Font.ITALIC, 35);
 	private Font italic_rank = new Font("Comic Sans MS Italic", Font.ITALIC, 50);
 	private Font italic_over = new Font("Comic Sans MS Italic", Font.ITALIC, 70);
